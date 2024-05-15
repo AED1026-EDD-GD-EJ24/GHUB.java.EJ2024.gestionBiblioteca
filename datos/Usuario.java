@@ -6,8 +6,10 @@ import java.util.LinkedList;
 public class Usuario {
     private String id;
     private String nombre;
-    private LinkedList<Libro> librosEsperando;
-    private ArrayList<Libro> librosPrestados;
+    //crea una LinkedList de libros que el usuario espera y nómbrela librosEsperando
+
+    //crea un ArrayList de libros que el usuario tiene prestados y nómbrela librosPrestados
+   
 
     public Usuario(String id, String nombre) {
         this.id = id;
@@ -24,25 +26,31 @@ public class Usuario {
         return nombre;
     }
 
-    public LinkedList<Libro> getLibrosEsperando() {
+    //retorne una LinkedList de libros que el usuario espera
+
+    public <coloque el código faltabte> getLibrosEsperando() {
         return librosEsperando;
     }
 
-    public ArrayList<Libro> getLibrosPrestados() {
+    //retorne un ArrayList de libros que el usuario tiene prestados
+    public <coloque el código faltante> getLibrosPrestados() {
         return librosPrestados;
     }
 
     public void tomarPrestado(Libro libro) {
         
-        librosPrestados.add(libro);
+        //agregue el libro a la lista de libros prestados
+       
     }
 
     public void devolver(Libro libro) {
-        librosPrestados.remove(libro);
+        //remueva el libro de la lista de libros prestados
+        
     }
 
     public void esperarLibro(Libro libro) {
-        librosEsperando.add(libro);
+        //agregue el libro a la lista de libros esperando
+        
     }
 
     public void recibirLibro() {

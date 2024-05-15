@@ -2,8 +2,8 @@ package datos;
 import java.util.Objects;
 import java.lang.Comparable;
 
-
-public class Libro implements Comparable<Libro> {
+//implemente la interfaz Comparable de la clase java.lang
+public class Libro  {
     private String titulo;
     private String autor;
     private String isbn;

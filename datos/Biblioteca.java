@@ -1,9 +1,11 @@
 package datos;
-import java.util.Hashtable;
-import java.util.TreeSet;
+//coloque la directiva de importación necesaria
 
 public class Biblioteca {
-    private TreeSet<Libro> libros;
+    //crea un TreeSet de libros y nómbrelo libros
+
+    //crea una Hashtable de usuarios y nómbrela usuarios
+   
     private Hashtable<String, Usuario> usuarios;
 
 
@@ -33,7 +35,8 @@ public class Biblioteca {
     }
 
     public void prestarLibro(String idUsuario, Libro libro) {
-        Usuario usuario = usuarios.get(idUsuario);
+        //obtenga el usuario con el id proporcionado
+        Usuario usuario = <coloque el código faltante>;
         if (usuario == null) {
             throw new IllegalArgumentException("El usuario no existe");
         }
@@ -51,27 +54,15 @@ public class Biblioteca {
         if (!libroEncontrado) {
             throw new IllegalArgumentException("El libro no está disponible");
         }
-        /* 
-
-
-
-
-
         
-        if (libros.contains(libro)) {
-            libros.remove(libro);
-            usuarios.get(idUsuario).tomarPrestado(libro);
-        } else {
-            usuarios.get(idUsuario).esperarLibro(libro);
-        }
-        */
         
 
     }
 
     public void devolverLibro(String idUsuario, Libro libro) {
         usuarios.get(idUsuario).devolver(libro);
-        libros.add(libro);
+        //agregue el libro a la lista de libros de la biblioteca
+       
     }
 
     public Usuario buscarUsuario(String id) {

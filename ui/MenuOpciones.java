@@ -8,8 +8,8 @@ import datos.Libro;
 import datos.Usuario;
 
 public class MenuOpciones {
-    // Crear una nueva biblioteca
-    Biblioteca biblioteca = new Biblioteca();
+    // Crear una nueva biblioteca y nómbrela biblioteca
+   
     Scanner scanner = new Scanner(System.in);
     String opcion;
     Libro libro1 = null,libro2 = null,libro3 = null;
@@ -18,9 +18,8 @@ public class MenuOpciones {
         libro1 = new Libro("Don Quijote de la Mancha", "Miguel de Cervantes", "978-3-16-148410-0");
         libro2 = new Libro("Cien años de soledad", "Gabriel García Márquez", "978-3-16-148411-7");
         libro3 = new Libro("1984", "George Orwell", "978-3-16-148412-4");
-        biblioteca.agregarLibro(libro1);
-        biblioteca.agregarLibro(libro2);
-        biblioteca.agregarLibro(libro3);
+        // Agregar libros a la biblioteca
+       
 
     }
     public void eliminarLibro(){
@@ -101,8 +100,9 @@ public class MenuOpciones {
        //registro un usuario
         Usuario usuario2 = new Usuario("2", "Ana Sánchez");
         // Registrar los usuarios en la biblioteca
+        //invoque al método registrarUsuario de la biblioteca
        
-        biblioteca.registrarUsuario(usuario2);
+        
         //Prestar libro de la biblioteca");
         Usuario usuarioAprestar = new Usuario("2", "Ana Sánchez");
         System.out.println("el usuario "+usuarioAprestar.getNombre() + " con Id: " + usuarioAprestar.getId() + " solicitá un préstamo" ) ;
@@ -111,7 +111,8 @@ public class MenuOpciones {
                          
         
         // Prestar un libro a un usuario
-        Libro libroAPrestar = biblioteca.buscarLibro("978-3-16-148410-0");
+        //busque el libro con isbn 978-3-16-148410-0
+        Libro libroAPrestar = <coloque el código faltante>
 
         Usuario usuarioAPrestar = biblioteca.buscarUsuario("2");
         String idUsuarioAPrestar = usuarioAPrestar.getId();
